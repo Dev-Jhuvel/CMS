@@ -1,0 +1,212 @@
+/* Site Colors:
+  #e03e52 - pink
+  #c8ced2 - grey
+  #f07b27 - orange
+  #786758 - brown
+*/
+
+html {
+  height: 100%;
+  width: auto;
+}
+
+body {
+  width: 1590px;
+  height: 100%;
+  margin: auto;
+  border: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 15px;
+  background: #c8ced2;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background: #e03e52;
+  color: #FFFFFF;
+}
+
+header h1 {
+  padding: 1em;
+  margin: 0;
+}
+
+#main {
+  display: flex;
+  width: 1500px;
+  height: 85%;
+  margin: 0;
+  padding: 0;
+  background: #c8ced2;
+}
+
+footer {
+  clear: both;
+  height: 3em;
+  margin: 0;
+  padding: 1em;
+  text-align: center;
+  background: #e03e52;
+  color: #FFFFFF;
+}
+
+
+/* Navigation */
+
+navigation {
+  float: left;
+  width: 220px;
+  height: 100;
+  background: #7a6855;
+}
+
+navigation a {
+  font-size: 18px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+navigation a:hover {
+  color: #e03e52;
+
+}
+
+a {
+  color: #E03E52;
+  text-decoration: none
+}
+
+
+
+ul.subjects {
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+ul.subjects>li {
+  margin-bottom: 1em;
+}
+
+ul.pages {
+  margin-left: 15px;
+  padding: 0;
+  list-style: none;
+  font-weight: normal;
+}
+
+.selected>a {
+  color: #f07b27;
+  font-style: normal;
+}
+
+navigation li {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+
+/* Page Content */
+
+header a {
+  text-decoration: none !important;
+}
+
+.page_name {
+  text-decoration: none !important;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #000000;
+}
+
+.image_container {
+  margin-top: 10px;
+  height: 250px;
+  width: 80%;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+#hero-image {
+  float: left;
+  margin-bottom: 40px;
+  padding: 0;
+  height: 200px;
+  width: 900px;
+}
+
+#page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1500px;
+  height: 100%;
+  padding-left: 0;
+  vertical-align: top;
+  background: #ffffff;
+}
+
+
+#page h2 {
+  font-size: 14px;
+  color: #000000;
+  line-height: normal;
+}
+
+
+
+#page h3 {
+  font-size: 14px;
+  color: #e03e52;
+}
+
+#content {
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#content p {
+  font-size: 16px;
+  line-height: normal;
+}
+
+#content li {
+  padding: 5px;
+  font-size: 16px;
+}
+
+
+
+/* Service blocks on homepage */
+
+#service-blocks {
+  margin-top: 20px;
+}
+
+#service-blocks .service {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+}
+
+/* Learn More links */
+
+a.learnmore {
+  color: #E03E52;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none
+}
+
+a.learnmore:hover {
+  text-decoration: underline
+}
