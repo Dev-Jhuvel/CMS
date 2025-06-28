@@ -12,21 +12,23 @@
     ?></title>
   <meta charset="utf-8">
   <link rel="icon" href="images/favicon.ico" type="image/ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" media="all" href="<?php echo url_for('/stylesheets/public.css'); ?>" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
 </head>
 
 <body>
-
   <header>
-    <a href="<?php echo url_for('/index.php'); ?>">
-      <div class="">
-        <h1 class="page_name d-flex align-items-end"> <img style="width: 50px; height: 50px; margin:0 3px 5px 0;" src="<?php echo url_for('images/favicon.ico'); ?>"><?php echo $page_name; ?></h1>
-      </div>
-
-    </a>
-
+    <div class="nav-toggle"><i class="fa-solid fa-bars"></i></div>
+    <div class="row">
+      <a href="index.php">
+        <img src="images/coffee-small.svg" alt="icon">
+        <img src="images/text.svg" alt="icon">
+      </a>
+      <?php include(SHARED_PATH . '/public_navigation.php'); ?>
+    </div>
   </header>

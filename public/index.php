@@ -1,6 +1,7 @@
 <?php require_once('../private/initialize.php'); ?>
 <?php
 
+
 $preview =  false;
 if (isset($_GET['preview'])) {
   $preview = $_GET['preview'] === 'true' && is_logged_in() ? true : false;
@@ -9,6 +10,7 @@ $visible = !$preview;
 
 if (isset($_GET['id'])) {
   $page_id = $_GET['id'];
+  $subject = find_subject_by_id($page_id);
   $page = find_page_by_id($page_id, ['visible' => $visible]);
   if (!$page) {
     redirect_to('index.php');
@@ -37,29 +39,36 @@ if (isset($_GET['id'])) {
 ?>
 <?php include(SHARED_PATH . '/public_header.php'); ?>
 
-<div id="main">
-  <?php include(SHARED_PATH . '/public_navigation.php'); ?>
+<main class="main">
+  <?php
+  // include(SHARED_PATH . '/public_navigation.php');
+  ?>
 
-  <div id="page">
+  <div class="website-container">
     <?php
+    // TODO: SUBEJCT NAME AND MENU NAME
     if (isset($page)) {
       $allowed_tags = '<div><img><h1><h2><strong><li><a><ul><br><p>';
     ?>
-      <div class="image_container" style=" background: url(<?php echo url_for('/images/uploaded_image/' . $page['image']) ?>) no-repeat center center; background-size: cover;">
-        <!-- <img src="<?php echo url_for('/images/uploaded_image/' . $page['image']) ?>" alt="Page Image"> -->
+      <div class="hero" style=" background-image: url(<?php echo url_for('/images/uploaded_image/' . $page['image']) ?>);">
+        <h1><?php echo $subject['menu_name'] ?></h1>
       </div>
-      <h1 class="m-2 text-left"><?php echo $page['menu_name'] ?></h1>
+      <div class="content container">
+        <h1 class="page-title"><?php echo $page['menu_name'] ?></h1>
 
-      <p class="p-4"><?php echo nl2br(strip_tags($page['content'], $allowed_tags)); ?></p>
-    <?php
+        <p><?php echo nl2br(strip_tags($page['content'], $allowed_tags)); ?></p>
+      <?php
 
     } else {
-      include(SHARED_PATH . '/static_homepage.php');
+      include(SHARED_PATH . '/static.php');
     }
-    ?>
+      ?>
 
+      </div>
   </div>
 
-</div>
+</main>
 
 <?php include(SHARED_PATH . '/public_footer.php'); ?>
+
+<script src="script.js"></script>
