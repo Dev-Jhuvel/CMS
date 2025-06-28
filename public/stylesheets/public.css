@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Roboto", serif;
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: bisque;
+    padding: 1em;
+    display: flex;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    padding-left: 3em;
+}
+
+.nav {
+    display: none;
+}
+
+.nav-visible {
+    display: block;
+}
+
+.nav-toggle i {
+    font-size: 2em;
+}
+
+.nav-toggle {
+    position: absolute;
+    top: 14;
+    cursor: pointer;
+}
+
+.main {
+    margin: 0;
+    display: flex;
+}
+
+/* .sidebar {
+    max-width: 200px;
+    min-width: 130px;
+    background-color: brown;
+    padding: .5em 0 500px 0;
+} */
+
+.nav {
+    /* position: sticky;
+    top: 0; */
+    padding: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    margin-bottom: auto;
+    padding: 0;
+    margin-left: .7em;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: brown;
+    font-weight: 700;
+    font-size: 1.3em;
+    margin: 0;
+}
+
+.page-item {
+    font-weight: 400;
+}
+
+.selected>a {
+    color: #121212;
+    font-weight: bold;
+}
+
+.nav-item {
+    margin-bottom: 1em;
+}
+
+.website-container {
+    width: 100%;
+}
+
+.hero {
+    padding: 150px 100px;
+    /* background-image: url(gtr2.jpg); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.hero h1 {
+    text-shadow: 2px 2px 5px black;
+    font-weight: 900;
+    color: #fff;
+    font-size: 4rem;
+    margin: 0;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 1.5em 2em;
+}
+
+.content p {
+    font-size: 1.1em;
+}
+
+.page-title {
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+}
+
+
+/* Static Page */
+
+h2 {
+    font-size: clamp(1em, 2.5em, 3em);
+}
+
+.static-hero {
+    padding: 200px 0;
+    text-align: center;
+    background: #f3ee9f;
+    background-image: url('../images/uploaded_image/Home_brew.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.static-hero-text {
+    min-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.static-hero p {
+    font-size: 1.3em;
+    font-weight: 900;
+    letter-spacing: 1em;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgb(45, 1, 1);
+}
+
+.static-hero h1 {
+    font-weight: 900;
+    font-size: clamp(1em, 3em, 4em);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+
+}
+
+
+.static-main h2 {
+    text-align: center;
+    font-weight: 900;
+    color: brown;
+}
+
+
+.col {
+    width: 100%;
+    margin: 0 1em;
+}
+
+
+
+.colored-section {
+    padding: 100px 0;
+
+}
+
+
+.col h2 {
+    font-weight: 900;
+}
+
+
+
+.bg-black {
+    background-color: rgba(42, 42, 42, 0.983);
+    color: #fff;
+}
+
+.bg-brown {
+    background-color: rgb(177, 177, 177);
+    color: #000;
+
+}
+
+.second {
+    text-align: left;
+    padding: 100px 0;
+}
+
+.second h2 {
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Footer */
+
+footer {
+    background-color: bisque;
+    text-align: center;
+    padding: .1em;
+}
+
+@media (min-width: 700px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav {
+        display: block;
+    }
+
+    .nav-list {
+        display: flex;
+    }
+
+    .pages {
+        display: block;
+    }
+
+
+
+}
